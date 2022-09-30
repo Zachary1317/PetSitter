@@ -20,7 +20,10 @@ const LoginScreen = ({navigation}) => {
  
   const passwordInputRef = createRef();
  
-//   const handleSubmitPress = () => {
+  const handleSubmitPress = () => {
+    // just for test
+    navigation.navigate('ExpensesOverview');
+    // real access backend data
 //     setErrortext('');
 //     if (!userEmail) {
 //       alert('Please fill Email');
@@ -67,7 +70,7 @@ const LoginScreen = ({navigation}) => {
 //         setLoading(false);
 //         console.error(error);
 //       });
-//   };
+  };
  
   return (
     <View style={styles.mainBody}>
@@ -81,11 +84,18 @@ const LoginScreen = ({navigation}) => {
         <View>
           <KeyboardAvoidingView enabled>
             <View style={{alignItems: 'center'}}>
+                <Text
+                    style={{
+                        fontSize:40,
+                        fontWeight:'bold',
+                        color:'white'
+                    }}
+                >Pet Me Now</Text>
               <Image
-                source={require('../assets/favicon.png')}
+                source={require('../assets/loginPage.png')}
                 style={{
-                  width: '50%',
-                  height: 100,
+                  width: '60%',
+                  height:200,
                   resizeMode: 'contain',
                   margin: 30,
                 }}
@@ -97,7 +107,7 @@ const LoginScreen = ({navigation}) => {
                 onChangeText={(UserEmail) =>
                   setUserEmail(UserEmail)
                 }
-                placeholder="Enter Email" //dummy@abc.com
+                placeholder="Enter Email"
                 placeholderTextColor="#8b9cb5"
                 autoCapitalize="none"
                 keyboardType="email-address"
@@ -135,7 +145,7 @@ const LoginScreen = ({navigation}) => {
             <TouchableOpacity
               style={styles.buttonStyle}
               activeOpacity={0.5}
-            //   onPress={handleSubmitPress}
+              onPress={handleSubmitPress}
               >
               <Text style={styles.buttonTextStyle}>LOGIN</Text>
             </TouchableOpacity>
@@ -156,7 +166,7 @@ const styles = StyleSheet.create({
   mainBody: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#307ecc',
+    backgroundColor: '#74C8DB',
     alignContent: 'center',
   },
   SectionStyle: {
