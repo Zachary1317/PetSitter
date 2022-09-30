@@ -11,6 +11,7 @@ import Home from './screens/Home';
 import Message from './screens/Message';
 import History from './screens/History';
 import Login from './screens/Login';
+import RegisterScreen from './screens/Register';
 
 
 
@@ -32,6 +33,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
+          <Stack.Screen name="Register" component={RegisterScreen}/>
           <Stack.Screen name="ExpensesOverview" component={Overview} options={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>

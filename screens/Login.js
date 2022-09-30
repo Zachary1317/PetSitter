@@ -151,7 +151,7 @@ const LoginScreen = ({navigation}) => {
             </TouchableOpacity>
             <Text
               style={styles.registerTextStyle}
-              onPress={() => navigation.navigate('RegisterScreen')}>
+              onPress={() => navigation.navigate('Register')}>
               New Here ? Register
             </Text>
           </KeyboardAvoidingView>
