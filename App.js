@@ -1,20 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+const BottomTabs = createBottomTabNavigator();
+
+import Me from './screens/Me';
+import Home from './screens/Home';
+import Message from './screens/Message';
+import History from './screens/History';
+
+
+
+function Overview() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <BottomTabs.Navigator>
+      <BottomTabs.Screen name="Home" component={Home} />
+      <BottomTabs.Screen name="History" component={History} />
+      <BottomTabs.Screen name="Message" component={Message} />
+      <BottomTabs.Screen name="Me" component={Me} />
+    </BottomTabs.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  return (
+    <>
+      <StatusBar style="auto" />
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="ExpensesOverview" component={Overview} options={{headerShown:false}}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
+  );
+}
+
