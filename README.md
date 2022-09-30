@@ -6,4 +6,4 @@ We formed a team of four and planned to complete the project within a month. I a
 registration and user information display. Now I have completed the design of the UI interface with Figma and the development of some pages with 
 React native.
 
-##UI design
+## UI design
