@@ -10,6 +10,7 @@ import Me from './screens/Me';
 import Home from './screens/Home';
 import Message from './screens/Message';
 import History from './screens/History';
+import Login from './screens/Login';
 
 
 
@@ -30,6 +31,7 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
           <Stack.Screen name="ExpensesOverview" component={Overview} options={{headerShown:false}}/>
         </Stack.Navigator>
       </NavigationContainer>
