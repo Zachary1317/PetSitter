@@ -6,12 +6,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
-import Me from './screens/Me';
-import Home from './screens/Home';
-import Message from './screens/Message';
-import History from './screens/History';
-import Login from './screens/Login';
-import RegisterScreen from './screens/Register';
+import Me from './MeScreen/Me';
+import Home from './BasicScreens/Home';
+import Message from './BasicScreens/Message';
+import History from './BasicScreens/History';
+import Login from './BasicScreens/Login';
+import RegisterScreen from './BasicScreens/Register';
 
 
 
